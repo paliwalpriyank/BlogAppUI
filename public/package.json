@@ -1,0 +1,38 @@
+{
+  "name": "blogappui",
+  "version": "1.0.0",
+  "description": "install all dependencies",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/paliwalpriyank/BlogAppUI.git"
+  },
+  "author": "Priyank Paliwal",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/paliwalpriyank/BlogAppUI/issues"
+  },
+  "homepage": "https://github.com/paliwalpriyank/BlogAppUI#readme",
+  "dependencies": {
+    "angular": "^1.5.8",
+    "angular-route": "^1.5.8",
+    "angular-ui-bootstrap": "^2.0.0",
+    "bootstrap": "^3.3.7",
+    "csslint": "^1.0.2",
+    "grunt": "^1.0.1",
+    "grunt-karma": "^2.0.0",
+    "http-server": "^0.9.0",
+    "jasmine-core": "^2.4.1",
+    "jshint": "^2.9.2",
+    "karma": "^1.1.2",
+    "karma-chrome-launcher": "^1.0.1",
+    "karma-coverage": "^1.1.1",
+    "karma-jasmine": "^1.0.2",
+    "saas": "^1.0.0"
+  },
+  "devDependencies": {},
+  "keywords": []
+}

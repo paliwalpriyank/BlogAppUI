@@ -1,0 +1,6 @@
+.gradle/
+bin/
+gradle/
+.git/
+public/node_modules/
+
