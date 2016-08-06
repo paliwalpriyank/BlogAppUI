@@ -1,15 +1,19 @@
 
-angular.module('blogApp',[
+var myapp = angular.module('blogApp',[
   'ngRoute'
-])
-.config(['$locationProvider','$routeProvider', function($locationProvider,$routeProvider){
+]);
+myapp.config(function($routeProvider, $locationProvider){
   $routeProvider.when('/',{
     templateUrl:'assets/components/authentication/signInForm.html',
-    controller:'signIn'
+    controller:'signInController'
   })
   .when('/register',{
     templateUrl:'assets/components/authentication/registerForm.html',
-    controller:'register'
+    controller:'registerController'
   })
   .otherwise({redirectTo:'/'});
-}]);
+  $locationProvider.html5Mode({
+  enabled: true,
+  requireBase: false
+});
+});

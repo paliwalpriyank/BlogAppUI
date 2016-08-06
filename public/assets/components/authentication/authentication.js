@@ -1,8 +1,10 @@
 'use strict';
-angular.module('blogApp')
-.controller('signIn',['$scope', function($scope){
+var myapp = angular.module('blogApp');
+myapp.controller('signInController',['$scope', function($scope){
       $scope.message='Clear message';
-}])
-.controller('register',['$scope', function($scope){
-      $scope.message='Clear message';
+}]);
+myapp.controller('registerController',['$scope', function($scope){
+      $scope.message='';
+      $scope.register=function(){
+      };
 }]);

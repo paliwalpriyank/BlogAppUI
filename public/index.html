@@ -3,6 +3,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="assets/css/style.css"/>
     <script src="node_modules/angular/angular.min.js"></script>
     <script src="node_modules/angular-route/angular-route.min.js"></script>
     <script src="node_modules/angular-ui-bootstrap/dist/ui-bootstrap.js"></script>
@@ -14,9 +15,12 @@
     <header class="col-md-2 col-md-offset-5 text-center">
         <h3>ShareIdea</h3>
     </header>
-    <div ng-view></div>
+    	<div class="text-center" id="wrap">
+          <div ng-view></div>
+      </div>
     <footer>
-      <h5>This is footer</h5>
+
+      <h5>&#169; Priyank Paliwal</h5>
     </footer>
   </body>
 </html>
