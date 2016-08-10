@@ -1,6 +1,9 @@
-<div class="col-md-2 col-md-offset-5">
-<img class="margin-elements img-responsive logo center-block" src="assets/images/appimage.jpg" alt="ShareIdea"/>
+<div class="col-md-2 col-md-offset-5 margin-authentication">
+
 <form>
+    <fieldset class="form-group">
+      <span class="pull-left" ><mark class="text-success "><b>{{message}}</b></mark></span>
+    </fieldset>
     <fieldset class="form-group padding-top">
         <input type="email" placeholder="Email" ng-model="email" required>
     </fieldset>
@@ -14,6 +17,5 @@
     <a href="employee">employee List</a>
     <a href="manager">manager List</a>
     <a href="purchaser">purchaser List</a>
-    {{message}}
 </form>
 </div>

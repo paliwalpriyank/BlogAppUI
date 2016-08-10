@@ -1,12 +1,12 @@
 body {
     margin: auto;
-    padding: 10px;
+
 }
 .padding-top{
-  padding-top : 20px;
+  padding-top : 15px;
 }
 #wrap {
-  min-height: 100%;
+  min-height: 88%;
   height: auto;
   /* Negative indent footer by its height */
   margin: 0px auto -60px ;
@@ -21,4 +21,27 @@ input {
     border-radius: 3px;
     border: solid 1px gray;
     padding:5px;
+}
+.message-padding-top{
+padding-top: 10px;
+}
+.header-background{
+  background-color: #016658;
+  margin-left:0px;
+  margin-right:0px;
+}
+.logo-header{
+  max-width:50%;
+}
+.footer{
+  margin-left:15px;
+}
+.margin-authentication{
+  margin-top:60px;
+}
+.valign{
+  margin-top:30px;
+}
+.margin-left-button{
+  margin-left:10px;
 }

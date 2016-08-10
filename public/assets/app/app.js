@@ -1,6 +1,7 @@
 
 var myapp = angular.module('blogApp',[
-  'ngRoute'
+  'ngRoute',
+  'angular-oauth2'
 ]);
 myapp.config(function($routeProvider, $locationProvider){
   $routeProvider.when('/',{
