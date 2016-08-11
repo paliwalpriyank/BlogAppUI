@@ -22,6 +22,7 @@
     "angular-oauth2": "^4.0.0",
     "angular-route": "^1.5.8",
     "angular-ui-bootstrap": "^2.0.0",
+    "angular-ui-tinymce": "0.0.16",
     "bootstrap": "^3.3.7",
     "csslint": "^1.0.2",
     "grunt": "^1.0.1",

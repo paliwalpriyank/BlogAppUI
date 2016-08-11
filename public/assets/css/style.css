@@ -45,3 +45,6 @@ padding-top: 10px;
 .margin-left-button{
   margin-left:10px;
 }
+.editor-height{
+  min-height:50%;
+}
