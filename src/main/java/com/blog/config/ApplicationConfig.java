@@ -3,6 +3,7 @@ package com.blog.config;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.mongodb.config.AbstractMongoConfiguration;
+import org.springframework.data.mongodb.core.MongoClientFactoryBean;
 import org.springframework.data.mongodb.core.MongoFactoryBean;
 import org.springframework.data.mongodb.repository.config.EnableMongoRepositories;
 
@@ -12,8 +13,8 @@ import com.mongodb.WriteConcern;
 @Configuration
 @EnableMongoRepositories
 public class ApplicationConfig  {
-	public @Bean MongoFactoryBean mongo() {
-        MongoFactoryBean mongo = new MongoFactoryBean();
+	public @Bean MongoClientFactoryBean mongo() {
+		MongoClientFactoryBean mongo = new MongoClientFactoryBean();
         mongo.setHost("localhost");
         return mongo;
    }
