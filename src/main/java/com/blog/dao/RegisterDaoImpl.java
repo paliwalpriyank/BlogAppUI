@@ -8,11 +8,11 @@ import com.blog.document.Person;
 import com.blog.repository.PersonRepository;
 
 @Component
-public class PostDaoImpl {
-	
+public class RegisterDaoImpl {
+
 	@Autowired private PersonRepository personRepository;
 	@Autowired private MongoOperations operations;
-	public void insertPerson(){
-	 personRepository.save(new Person("Priyank","Paliwal","paliwal.priyank2001@gmail.com","pass"));
+	public void insertPerson(Person person){
+	 personRepository.save(person);
 	}
 }

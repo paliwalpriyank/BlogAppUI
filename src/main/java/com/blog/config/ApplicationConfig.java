@@ -11,16 +11,16 @@ import com.mongodb.Mongo;
 import com.mongodb.WriteConcern;
 
 @Configuration
-@EnableMongoRepositories
-public class ApplicationConfig  {
+@EnableMongoRepositories(basePackages = "com.blog.repository")
+public class ApplicationConfig   {
 	public @Bean MongoClientFactoryBean mongo() {
 		MongoClientFactoryBean mongo = new MongoClientFactoryBean();
         mongo.setHost("localhost");
         return mongo;
    }
 
-/*	@Override
+	
 	protected String getMappingBasePackage() {
-		return "com.Documents";
-	}*/
+		return "com.blog.repository";
+	}
 }
