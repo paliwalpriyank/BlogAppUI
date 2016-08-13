@@ -2,7 +2,8 @@
 var myapp = angular.module('blogApp',[
   'ngRoute',
   'angular-oauth2',
-  'ui.tinymce'
+  'ui.tinymce',
+  'angularUtils.directives.dirPagination'
 ]);
 myapp.config(function($routeProvider, $locationProvider){
   $routeProvider.when('/',{
@@ -16,6 +17,10 @@ myapp.config(function($routeProvider, $locationProvider){
   .when('/post',{
     templateUrl:'assets/components/newPost/newPost.html',
     controller:'postController'
+  })
+  .when('/allArticles',{
+    templateUrl:'assets/components/articleListings/article.html',
+    controller:'articleController'
   })
   .otherwise({redirectTo:'/'});
   $locationProvider.html5Mode({

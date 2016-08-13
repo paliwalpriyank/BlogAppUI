@@ -8,5 +8,5 @@ myapp.controller('headerController',['$scope','$location', function($scope,$loca
       $scope.signIn=function(){
       $location.path( "/" );
       };
-    
+
 }]);

@@ -12,4 +12,5 @@ import com.blog.document.Person;
 
 public interface PersonRepository extends MongoRepository<Person, String> {
 	List<Person> findById(String id, Sort sort);
+	Person findByEmail(String email);
 }

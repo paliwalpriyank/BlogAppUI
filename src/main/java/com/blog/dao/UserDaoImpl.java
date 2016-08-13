@@ -8,11 +8,14 @@ import com.blog.document.Person;
 import com.blog.repository.PersonRepository;
 
 @Component
-public class RegisterDaoImpl {
+public class UserDaoImpl {
 
 	@Autowired private PersonRepository personRepository;
 	@Autowired private MongoOperations operations;
 	public void insertPerson(Person person){
 	 personRepository.save(person);
+	}
+	public Person authPerson(String email){
+		 return personRepository.findByEmail(email);
 	}
 }

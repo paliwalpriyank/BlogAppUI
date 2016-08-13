@@ -48,3 +48,13 @@ padding-top: 10px;
 .editor-height{
   min-height:50%;
 }
+.post-heading{
+  align:left;
+  margin-top: 0px;
+}
+.margin-post-top{
+  margin-top:60px;
+}
+.table-margin-top{
+  margin-top:50px;
+}

@@ -1,6 +1,9 @@
 <div class="col-md-8 col-md-offset-2 ">
-<h3>Create a new post</h3>
+<h3 class="pull-left post-heading">Create a new post</h3>
   <form method="post">
+    <div class="form-group margin-post-top">
+        <input type="text" class="form-control" placeholder="Enter the title for the Article" ng-model="title">
+    </div>
     <textarea class="editor-height" ui-tinymce="tinymceOptions" ng-model="tinymceModel"></textarea>
       <button ng-click="getContent()">Get content</button>
       <button ng-click="setContent()">Set content</button>
