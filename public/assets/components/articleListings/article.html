@@ -1,11 +1,10 @@
 <input type="text" ng-model="search" class="form-control" style="width:20%;display:inline;margin-right:30%" placeholder="Search">
-
-<div class="col-md-8 col-md-offset-2 ">
-<table class="table table-margin-top" >
+<div class="col-md-8 col-md-offset-2 jumbotron">
+<table class="table " >
   <tbody >
-      <tr dir-paginate="cut in allArticles|orderBy:sort:true|filter:search|itemsPerPage:10">
+      <tr dir-paginate="cut in allArticles|orderBy:sort:true|filter:search|itemsPerPage:10" ng-click="display(cut)">
           <td class="col-md-2">{{cut.upVotes}}</td>
-          <td class="col-md-6">{{cut.title}}</td>
+          <td class="col-md-6 textsize"><h4>{{cut.title}}</h4></td>
       <tr>
     </tbody>
 </table>

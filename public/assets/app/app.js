@@ -3,7 +3,8 @@ var myapp = angular.module('blogApp',[
   'ngRoute',
   'angular-oauth2',
   'ui.tinymce',
-  'angularUtils.directives.dirPagination'
+  'angularUtils.directives.dirPagination',
+  'ngSanitize'
 ]);
 myapp.config(function($routeProvider, $locationProvider){
   $routeProvider.when('/',{
@@ -21,6 +22,14 @@ myapp.config(function($routeProvider, $locationProvider){
   .when('/allArticles',{
     templateUrl:'assets/components/articleListings/article.html',
     controller:'articleController'
+  })
+  .when('/displayArticle',{
+    templateUrl:'assets/components/showArticle/displayArticle.html',
+    controller:'displayController'
+  })
+  .when('/userDashboard',{
+    templateUrl:'assets/components/userArticles/userArticle.html',
+    controller:'userController'
   })
   .otherwise({redirectTo:'/'});
   $locationProvider.html5Mode({
