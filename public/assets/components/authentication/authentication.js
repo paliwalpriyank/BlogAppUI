@@ -1,9 +1,12 @@
 'use strict';
 var myapp = angular.module('blogApp');
 
-myapp.controller('signInController',['$scope','$http','Auth', function($scope,$http,Auth){
+myapp.controller('signInController',['$scope','$http','Auth','$location', function($scope,$http,Auth,$location){
       $scope.email='';
       $scope.password='';
+      if(Auth.isLoggedIn()){
+        $location.path( "/userDashboard" );
+      }
       $scope.signIn = function(){
         $http({
           method: 'POST',
@@ -13,10 +16,13 @@ myapp.controller('signInController',['$scope','$http','Auth', function($scope,$h
             password : $scope.password
           }
         }).then(function(response){
-          alert('done'+response.data.email);
-          Auth.setUser(response.data.email);
+          if(response.data.email!==null){
+                Auth.setUser(response.data.email);
+                $location.path( "/userDashboard" );
+          }
+          $scope.message = "Invalid username or password. Please Retry!";
         }, function(response){
-
+            $scope.message = "Invalid username or password. Please Retry!";
         });
       };
 }]);
@@ -37,7 +43,7 @@ myapp.controller('registerController',['$scope','$http','$location', function($s
             password : $scope.password
           }
         }).then(function(response){
-          $location.path('/post');
+          $location.path('/');
         }, function(response){
 
         });
