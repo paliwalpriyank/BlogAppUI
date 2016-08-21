@@ -17,7 +17,7 @@ $scope.getContent = function() {
       createdDate : new Date()
     }
   }).then(function(response){
-    alert('success');
+  $location.path( "/userDashboard" );
   }, function(response){
 
   });

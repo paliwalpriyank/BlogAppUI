@@ -6,10 +6,10 @@ body {
   padding-top : 15px;
 }
 #wrap {
-  min-height: 88%;
+  min-height: 85%;
   height: auto;
   /* Negative indent footer by its height */
-  margin: 0px auto -60px ;
+  margin: 0px auto -30px ;
   /* Pad bottom by footer height */
   padding: 50px 0 60px;
 }
@@ -35,6 +35,8 @@ padding-top: 10px;
 }
 .footer{
   margin-left:15px;
+  vertical-align: bottom;
+  position:absolute;
 }
 .margin-authentication{
   margin-top:60px;
@@ -57,4 +59,7 @@ padding-top: 10px;
 }
 .table-margin-top{
   margin-top:50px;
+}
+.textsize{
+  text-size:18;
 }
