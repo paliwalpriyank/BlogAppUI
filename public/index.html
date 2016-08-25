@@ -11,29 +11,38 @@
     <script src="node_modules/angular-oauth2/dist/angular-oauth2.min.js"></script>
     <script src="node_modules/angular-ui-bootstrap/dist/ui-bootstrap.js"></script>
     <script src="node_modules/angular-utils-pagination/dirPagination.js"></script>
+    <script src="node_modules/angular-sanitize/angular-sanitize.min.js"></script>
 
     <script src="assets/app/app.js"></script>
     <script src="assets/services/auth.js"></script>
+    <script src="assets/services/displayArticleServ.js"></script>
     <script src="assets/components/authentication/authentication.js"></script>
     <script src="assets/components/main.js"></script>
     <script src="assets/components/newPost/post.js"></script>
     <script src="assets/components/articleListings/article.js"></script>
+    <script src="assets/components/showArticle/displayArticle.js"></script>
+    <script src="assets/components/userArticles/userArticle.js"></script>
+
     <script src='//cdn.tinymce.com/4/tinymce.min.js'></script>
     <script type="text/javascript" src="node_modules/angular-ui-tinymce/src/tinymce.js"></script>
   </script>
     <title>ShareIdea Be Free</title>
   </head>
   <body>
+
+
     <header class="row header-background" ng-controller="headerController">
         <div class="col-md-2">
           <a href="/"><img class="img-responsive logo-header" src="assets/images/appimage.jpg" alt="ShareIdea" /></a>
         </div>
         <div class="col-md-8">""</div>
         <div class="col-md-2 valign">
-              <button type="submit" class="btn btn-primary"  ng-click="signIn()">Sign In</button>
-              <button type="submit" class="btn btn-primary margin-left-button" ng-click="register()">Register</button>
+              <button type="submit" class="btn btn-primary"  ng-click="signIn()" ng-show="!enableAuth()">Sign In</button>
+              <button type="submit" class="btn btn-primary margin-left-button" ng-click="register()" ng-show="!enableAuth()">Register</button>
+              <button type="submit" class="btn btn-primary margin-left-button" ng-click="signOut()" ng-show="enableAuth()">Sign Out</button>
         </div>
     </header>
+
   <div class="text-center" id="wrap">
         <div ng-view></div>
   </div>
