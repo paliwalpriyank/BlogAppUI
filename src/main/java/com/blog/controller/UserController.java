@@ -26,8 +26,12 @@ public class UserController {
 	@CrossOrigin(origins = "http://localhost:8081")
 	@RequestMapping(method = RequestMethod.POST,value="/authenticate")
 	public Person authUser(@RequestBody Person person){
-		Person personAuth =registerDao.authPerson(person.getEmail());
-		return personAuth;
+		Person personAuth =registerDao.authPerson(person.getEmail(), person.getPassword());
+		if(personAuth.getPassword().equals(person.getPassword())){
+			personAuth.setPassword("");
+			return personAuth;
+		}		
+		return new Person();
 	}
 	
 }

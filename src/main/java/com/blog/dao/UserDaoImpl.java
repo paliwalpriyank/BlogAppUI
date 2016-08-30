@@ -15,7 +15,7 @@ public class UserDaoImpl {
 	public void insertPerson(Person person){
 	 personRepository.save(person);
 	}
-	public Person authPerson(String email){
-		 return personRepository.findByEmail(email);
+	public Person authPerson(String email, String password){
+		 return personRepository.findByEmailAndPassword(email,password);
 	}
 }
