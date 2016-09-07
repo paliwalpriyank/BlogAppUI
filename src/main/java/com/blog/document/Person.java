@@ -28,7 +28,7 @@ public class Person extends AbstractDocument{
 	public void setLastName(String lastName) {
 		this.lastName = lastName;
 	}
-	@JsonIgnore
+
 	public String getPassword() {
 		return password;
 	}

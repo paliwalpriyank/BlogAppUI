@@ -1,8 +1,19 @@
 package com.blog.document;
 
+import java.math.BigInteger;
 import java.util.Date;
 
-public class Article extends AbstractDocument {
+import org.springframework.data.annotation.Id;
+
+public class Article {
+	@Id
+	private BigInteger id;
+	public BigInteger getId() {
+		return id;
+	}
+	public void setId(BigInteger id) {
+		this.id = id;
+	}
 	private String upVotes;
 	private String title;
 	private String html;
